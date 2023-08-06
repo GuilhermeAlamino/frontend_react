@@ -169,3 +169,33 @@ tr.clickable-row {
 .col-md-6.col-lg-4.p-3.rounded.border.loginForm {
   background: white !important;
 }
+
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  font-size: 5rem;
+  margin: 0;
+}
+
+p {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+a.notfound {
+  color: #007bff !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  transition: color 0.3s !important;
+}
+
+a.notfound:hover {
+  color: #0056b3 !important;
+}

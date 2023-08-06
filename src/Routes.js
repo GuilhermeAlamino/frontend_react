@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Login from './pages/login';
 import Dashboard from './pages/dashboard';
 import DashboardHome from './pages/dashboard/content/home.js';
@@ -16,10 +16,22 @@ import TaskStore from './pages/dashboard/task/store';
 import TaskShow from './pages/dashboard/task/show';
 import TaskDelete from './pages/dashboard/task/delete';
 
+const NotFound = () => {
+  return (
+    <div className="not-found-container">
+      <h1>404</h1>
+      <p>Página não encontrada</p>
+      <Link className='notfound' to="/">Voltar à página inicial</Link>
+    </div>
+  );
+};
+
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Login />}></Route>
+        <Route path="/login" element={<Login />}></Route>
         <Route path="/dashboard" element={<Dashboard />}>
           <Route path="/dashboard/home" element={<DashboardHome />}></Route>
           <Route path="/dashboard/employee" element={<Employee />}></Route>
@@ -35,7 +47,7 @@ export default function App() {
           <Route path="/dashboard/task/show/:id" element={<TaskShow />}></Route>
           <Route path="/dashboard/task/delete/:id" element={<TaskDelete />}></Route>
         </Route>
-        <Route path="/login" element={<Login />}></Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
