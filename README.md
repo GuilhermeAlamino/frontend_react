@@ -6,6 +6,12 @@ Objetivo deste projeto é consumir uma api no laravel, utilizei hooks (useState.
 
 Tenha o Node instalado.
 
+# Faça o clone do projeto
+
+Coloque a pasta no seu Ambiente de Desenvolvimento, obs: utilize terminal para colar o comando git clone (entre outros) ou baixe a pasta.
+
+### `*git clone https://github.com/GuilhermeAlamino/frontend_react.git*`
+
 ## Execute o comando
 
 No Diretorio do projeto, você execute o comando abaixo
